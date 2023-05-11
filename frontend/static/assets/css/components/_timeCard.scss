@@ -1,0 +1,113 @@
+// Add variables here
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// Time Card CSS
+.time {
+    &-card {
+        border: 1px solid $borderColor;
+        border-radius: 8px;
+        background-color: #ffffff;
+        padding: 50px 20px;
+        text-align: center;
+        h3 {
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+            font-weight: 400;
+        }
+        h4 {
+            font-size: 2.5em;
+            font-weight: 900;
+            margin-bottom: 0.6em;
+            color: $secondaryColor;
+        }
+        &__counter {
+            margin-bottom: 1.4em;
+            li {
+                display: inline-block;
+                background-color: #ffffff;
+                box-shadow: 0px 0px 51px rgba(228, 228, 228, 0.55);
+                margin-left: 0.3em;
+                margin-right: 0.3em;
+                margin-bottom: 0.6em;
+                width: 60px;
+                padding: 10px;
+                font-size: 1em;
+                font-weight: 600;
+                color: $grayColor;
+                span{
+                    display: inline-block;
+                    color: $primaryColor;
+                    font-weight: 900;
+                    font-size: 1.3em;
+                }
+            }
+        }
+        &__link {
+            font-size: 1.2em;
+            text-decoration: underline;
+        }
+    }
+}
+
+@include breakpoint-max(991px) {
+    .time {
+        &-card {
+            padding: 55px 25px;
+            font-size: 0.9375em;
+            h3 {
+                font-size: 1.3em;
+                margin-bottom: 0.5em;
+            }
+            h4 {
+                font-size: 2em;
+                margin-bottom: 0.6em;
+            }
+            &__counter {
+                margin-bottom: 1em;
+                li {
+                    margin-bottom: 0.6em;
+                    width: 60px;
+                    span {
+                        font-size: 1.1em;
+                    }
+                }
+            }
+            &__link {
+                font-size: 1em;
+            }
+        }
+    }
+}
+@include breakpoint-max(767px) {
+    .time {
+        &-card {
+            padding: 30px 25px;
+            h3 {
+                font-size: 1.1em;
+            }
+            h4 {
+                font-size: 1.5em !important;
+            }
+            &__counter {
+                li {
+                    font-size: 0.8em;
+                }
+            }
+        }
+    }
+}
+@include breakpoint-min(1400px) {
+    .time {
+        &-card {
+            &__counter {
+                li {
+                    width: 60px;
+                    span{
+                        font-size: 1.5em;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+// Add variables here
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.loader {
+  text-align: center;
+  margin: 20px 0px;
+  font-size: 70px;
+  color: #0c0c0c;
+}
+button {
+  border: 0;
+
+  &:active,
+  &:focus {
+    border: 0;
+    outline: 0;
+  }
+}
+// Button CSS
+.main-btn {
+  padding: 0.9375em 1.875em;
+  border-radius: 8px;
+  border: 0;
+  background-color: $secondaryColor;
+  color: #ffffff;
+  font-size: 1em;
+  font-weight: 600;
+  min-width: 125px;
+  &__border {
+    border: 2px solid $secondaryColor;
+    background-color: transparent;
+    color: $secondaryColor;
+  }
+}
+
+//RESPONSIVE
+
+@include breakpoint-max(767px) {
+  .main-btn {
+    padding: 0.7375em 1.275em;
+    font-size: 0.9em;
+  }
+}
+@include breakpoint-max(540px) {
+  // Button CSS
+  .main-btn {
+    padding: 0.8375em 1.475em;
+    font-size: 0.8em;
+  }
+}

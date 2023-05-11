@@ -1,0 +1,46 @@
+// Add variables here
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+input[type=range] {
+    appearance: none;
+    width: 250px;
+    margin: 0;
+    overflow: hidden;
+    outline: none;
+    background: linear-gradient($secondaryColor, $secondaryColor) no-repeat center;
+    background-size: 100% 4px;
+    pointer-events: none;
+    &:active,
+    &:focus {
+       outline: none;
+    }
+    &::-webkit-slider-thumb {
+       height: 16px;
+       width: 16px;
+       border-radius: 50%;
+       background-color: $secondaryColor;
+       position: relative;
+       cursor: pointer;
+       appearance: none;
+       pointer-events: all;
+    }
+ }
+ .multi-range {
+    position: relative;
+    input[type=range] {
+       position: absolute;
+       &:nth-child(1) {
+          &::-webkit-slider-thumb::before {
+             background-color: $secondaryColor;
+          }
+       }
+       &:nth-child(2) {
+          background: none;
+          &::-webkit-slider-thumb::before {
+              background-color: $secondaryColor; 
+          }
+       }
+    }
+ }
+ 

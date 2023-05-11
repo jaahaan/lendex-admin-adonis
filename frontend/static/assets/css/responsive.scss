@@ -1,0 +1,154 @@
+// /***************************
+//     Add Responsive Here
+// ***************************/
+// // Import scss files here
+// @use './abstracts/index' as *;
+
+// // For max-width: 991px
+// @include breakpoint-max(991px) {
+//     .navbar-item__menu {
+//         position: absolute;
+//         top: 100%;
+//         left: 0;
+//         width: 100%;
+//         box-shadow: 1px 2px 12px 0 rgb(0 0 0 / 4%);
+
+//         .navbar-collapse {
+//             max-width: 720px;
+//             margin-left: auto;
+//             margin-right: auto;
+
+//             .nav-item {
+//                 --bs-gutter-x: 1.5rem;
+//                 margin-right: calc(var(--bs-gutter-x) * .5);
+//                 margin-left: calc(var(--bs-gutter-x) * .5);
+//             }
+//         }
+//     }
+
+//     // Hero
+//     .hero {
+//         &-section {
+//             &__content {
+//                 h1 {
+//                     font-size: 3em;
+//                     margin-bottom: 0.475em;
+//                 }
+//             }
+//         }
+//     }
+
+//     //time-card
+//     // .time-card{
+//     //     &-card {
+//     //         h3 {
+//     //             font-size: 0.5em;
+//     //         }
+//     //         h4 {
+//     //             font-size: 1.5em;
+//     //         }
+//     //         &__counter {
+//     //             li {
+//     //                 span{
+//     //                     font-size: 0.5em;
+//     //                 }
+//     //             }
+//     //         }
+//     //     }
+//     // }
+
+//     //Carousel Nav
+
+//     // .hot-deals__carousel--area {
+//     //     padding-left: 20px;
+//     //     padding-right: 20px;
+//     // // }
+//     // .hot-deals__carousel .owl-nav{
+//     //     position: absolute;
+//     //     bottom: 0;
+//     //     left: 40%;
+//     //     transform: translateY(100%);
+//     //     display: flex;
+//     //     flex-direction: row;
+//     // }
+    
+// }
+
+// // For max-width: 767px
+// @include breakpoint-max(767px) {
+//     body {
+//         font-size: 0.9375em;
+//     }
+//     .pt-100 {
+//         padding-top: 50px;
+//     }
+    
+//     .pb-100 {
+//         padding-bottom: 50px;
+//     }
+
+//     .pb-70 {
+//         padding-bottom: 20px;
+//     }
+
+//     .ptb-100 {
+//         padding-top: 50px;
+//         padding-bottom: 50px;
+//     }
+//     .section-header {
+//         h2 {
+//             font-size: 1.5em;
+//         }
+//     }
+//     // Hero
+//     .hero {
+//         &-section {
+//             padding-top: 70px;
+//             padding-bottom: 70px;
+
+//             &__content {
+
+//                 h4 {
+//                     font-size: 1.2em;
+//                 }
+
+//                 h1 {
+//                     font-size: 2em;
+//                     margin-bottom: 0.65em;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// // For max-width: 575px
+// @include breakpoint-max(575px) {
+//     .navbar-item {
+//         &Logo {
+//             width: 30%;
+//         }
+//     }
+// }
+
+// // For min-width: 992px
+// @include breakpoint-min(992px) {
+
+//     /******* For Nav *******/
+//     .dropdown-menu {
+//         display: block;
+//         transform: translateY(10px);
+//         opacity: 0;
+//         pointer-events: none;
+//         transition: all 0.3s ease;
+//     }
+
+//     .nav-item {
+//         &:hover {
+//             .dropdown-menu {
+//                 transform: translateY(0);
+//                 opacity: 1;
+//                 pointer-events: all;
+//             }
+//         }
+//     }
+// }

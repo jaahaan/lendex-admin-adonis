@@ -1,0 +1,567 @@
+// Add variables here
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.about {
+    &-details {
+        margin-bottom: 50px;
+
+        &--area {
+            padding-left: 150px;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                background-color: $primaryColor;
+                height: 1.4px;
+                width: 120px;
+                top: 10px;
+                left: 0;
+            }
+
+            &---subtitle {
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 20px;
+                color: $primaryColor;
+            }
+
+            &---title {
+                font-size: 44px;
+                font-weight: 400;
+                margin-bottom: 40px;
+                color: $primaryColor;
+
+                span {
+                    font-weight: 600;
+                    display: block;
+                }
+            }
+        }
+
+        &--text {
+            font-size: 18px;
+            font-weight: 400;
+            color: $primaryColor;
+
+            &:not(:last-child) {
+                margin-bottom: 25px;
+            }
+        }
+    }
+
+    &-picture {
+        height: 600px;
+        margin-bottom: 50px;
+
+        .grid {
+            height: 100%;
+            display: flex;
+            width: 100%;
+            gap: 10px;
+
+            &-list {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                &:first-child {
+                    width: 70%;
+                }
+
+                &:last-child {
+                    width: 30%;
+                }
+
+                &--item {
+                    display: flex;
+                    height: 40%;
+                    gap: 10px;
+                }
+
+                &--picture {
+                    &---first {
+                        flex: 0 0 auto;
+                        height: calc(60% - 10px);
+
+                        img {
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                            border-radius: 4px;
+                        }
+                    }
+
+                    &---second {
+                        flex: 0 0 auto;
+                        width: calc(50% - 5px);
+
+                        img {
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                            border-radius: 4px;
+                        }
+                    }
+
+                    &---third {
+                        flex: 0 0 auto;
+                        width: calc(50% - 5px);
+
+                        img {
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                            border-radius: 4px;
+                        }
+                    }
+
+                    &---fourth {
+                        flex: 0 0 auto;
+                        height: calc(45% - 10px);
+
+                        img {
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                            border-radius: 4px;
+                        }
+                    }
+
+                    &---fifth {
+                        flex: 0 0 auto;
+                        height: 55%;
+
+                        img {
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                            border-radius: 4px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-experience {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+
+        &-card {
+            text-align: center;
+            box-shadow: 0px 0px 20px 2px #f2f2f2;
+            margin-bottom: 30px;
+            padding: 35px 30px;
+
+            i{
+                font-size: 70px;
+                color: $secondaryColor;
+            }
+
+            figure {
+                margin-bottom: 25px;
+            }
+
+            .title {
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 15px;
+            }
+
+            .text {
+                font-size: 16px;
+                font-weight: 400;
+                color: $primaryColor;
+            }
+        }
+    }
+
+    &-learn {
+        margin-bottom: 50px;
+        background-color: #ebebeb;
+
+        &--area {
+            padding-top: 100px;
+            padding-bottom: 100px;
+            gap: 30px;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        &--detail {
+            width: 50%;
+            flex: 0 0 auto;
+            padding-left: 100px;
+
+            h4 {
+                font-size: 40px;
+                font-weight: 600;
+                color: $primaryColor;
+                margin-bottom: 40px;
+                // white-space: nowrap;
+            }
+
+            p {
+                font-size: 19px;
+                font-weight: 400;
+                color: $primaryColor;
+                margin-bottom: 40px;
+            }
+
+            button {
+                font-size: 16px;
+                font-weight: 600;
+                color: #ffffff;
+                padding: 20px 35px;
+                background-color: $secondaryColor;
+                border-radius: 8px;
+            }
+
+        }
+
+        &--picture {
+            // width: 100%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 48%;
+        }
+    }
+
+    &-team {
+        text-align: center;
+        margin-bottom: 50px;
+
+        .header {
+            font-size: 22px;
+            font-weight: 600;
+            color: $secondaryColor;
+            margin-bottom: 15px;
+        }
+
+        .sub-header {
+            font-size: 42px;
+            font-weight: 600;
+            color: $primaryColor ;
+            margin-bottom: 65px;
+        }
+
+        &--member {
+            figure {
+                margin-bottom: 30px;
+            }
+
+            .title {
+                font-size: 22px;
+                font-weight: 500;
+                color: $primaryColor;
+                margin-bottom: 6px;
+            }
+
+            .sub-title {
+                font-size: 22px;
+                font-weight: 400;
+                color: #7d7d7d;
+            }
+        }
+    }
+}
+
+@include breakpoint-max(1399px) {
+
+    .about-learn {
+        &--area {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        &--detail {
+            width: 60%;
+            flex: 0 0 auto;
+            padding-left: 100px;
+        }
+        &--picture {
+            position: absolute;
+            right: -60px;
+            width: 44%;
+            bottom: 0;
+        }
+    }
+}
+@include breakpoint-max(1199px) {
+    .about-learn {
+        &--detail {
+            width: 70%;
+            flex: none;
+            padding-left: 0;
+            margin-left: auto;
+            margin-right: auto;
+            h4 {
+                margin-bottom: 33px;
+            }
+        }
+        &--picture {
+            display: none;
+        }
+    }
+}
+@include breakpoint-max(991px) {
+    .about-experience {
+        width: 100%; 
+    }
+    .about {
+        &-team {
+            margin-bottom: 25px;
+            &--member {
+                margin-bottom: 25px;
+            }
+        }
+        &-learn {
+            &--detail {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
+
+}
+@include breakpoint-max(767px) {
+    .about {
+        &-details {
+            &--area {
+                padding-left: 100px;
+
+                &::before {
+                    height: 1.2px;
+                    width: 80px;
+                    top: 8px;
+                }
+
+                &---subtitle {
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                }
+
+                &---title {
+                    font-size: 36px;
+                    margin-bottom: 20px;
+                }
+            }
+
+            &--text {
+                font-size: 16px;
+
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        &-picture {
+            height: 450px;
+        }
+
+        &-experience {
+            width: 100%;
+
+            &-card {
+                margin-bottom: 20px;
+                padding: 25px 20px;
+
+                figure {
+                    margin-bottom: 15px;
+
+                    img {
+                        max-width: 25%;
+                        height: 62px;
+                        object-fit: contain;
+                    }
+                }
+
+                .title {
+                    font-size: 16px;
+                    margin-bottom: 15px;
+                }
+
+                .text {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        &-learn {
+            &--detail {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+                h4 {
+                    font-size: 34px
+                }
+                p {
+                    font-size: 16px;
+                    margin-bottom: 30px;
+                }
+                button {
+                    font-size: 14px;
+                    padding: 15px 25px;
+                }
+            }
+        }
+
+        &-team {
+            margin-bottom: 30px;
+
+            .header {
+                font-size: 18px;
+                margin-bottom: 8px;
+            }
+
+            .sub-header {
+                font-size: 34px;
+                margin-bottom: 35px;
+            }
+
+            &--member {
+                figure {
+                    margin-bottom: 15px;
+                }
+
+                .title {
+                    font-size: 18px;
+                    margin-bottom: 4px;
+                }
+
+                .sub-title {
+                    font-size: 18px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint-max(480px) {
+    .about {
+        &-details {
+            &--area {
+                padding-left: 50px;
+
+                &::before {
+                    height: 1px;
+                    width: 45px;
+                    top: 7px;
+                }
+
+                &---subtitle {
+                    font-size: 14px;
+                    margin-bottom: 8px;
+                }
+
+                &---title {
+                    font-size: 26px;
+                    margin-bottom: 15px;
+                }
+            }
+
+            &--text {
+                font-size: 14px;
+
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+
+        &-picture {
+            height: 500px;
+            .grid {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                gap: 10px;
+                &-list {
+                    width: 100%;  
+                    &:first-child {
+                        width: 100%;
+                    }  
+                    &:last-child {   
+                        width: 100%;                               
+                        display: flex;
+                        flex-direction: row;
+                        gap: 10px;
+                    }
+                    &--picture {
+                        &---fourth {
+                            flex:none;
+                            width: 49%;
+                            height:42%;
+                        }
+    
+                        &---fifth {
+                            flex:none;
+                            width: 51%;
+                            height: 42%;
+                            img {
+                                width: 95%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-learn {
+            &--detail {
+                h4 {
+                    font-size: 26px;
+                    margin-bottom: 15px;
+                }
+                p {
+                    font-size: 14px;
+                    margin-bottom: 20px;
+                }
+                button {
+                    font-size: 12px;
+                    padding: 12px 20px;
+                }
+            }
+        }
+
+        &-team {
+            margin-bottom: 30px;
+
+            .header {
+                font-size: 16px;
+                margin-bottom: 5px;
+            }
+
+            .sub-header {
+                font-size: 26px;
+                margin-bottom: 25px;
+            }
+
+            &--member {
+                figure {
+                    margin-bottom: 15px;
+                }
+
+                .title {
+                    font-size: 18px;
+                    margin-bottom: 4px;
+                }
+
+                .sub-title {
+                    font-size: 18px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}

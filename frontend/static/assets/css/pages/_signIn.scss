@@ -1,0 +1,173 @@
+// Add variables here
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+
+.signIn-section {
+    
+    &--card {
+        max-width: 550px;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid #E3E3E3;
+        border-radius: 8px;
+        background-color: #ffffff;
+        box-shadow: 0px 0px 10px 3px #faf7f7;
+        padding: 85px 75px;
+        &-logo {
+            text-align: center;
+            img {
+                max-width: 180px;
+                height: auto;
+                margin-bottom: 25px;
+            }
+        }
+        &-input {
+            .form {
+                &-check__box {
+                    margin-bottom: 35px;
+                    label {
+                        font-size: 16px;
+                        padding-left: 20px;
+                        &:before {
+                            width: 13px;
+                            height: 13px;
+                            top: 5px;
+                        }
+                    }
+                    p {
+                        color: #515A6e;
+                    }
+                }
+            }
+            form{
+                h4 {
+                    color: $primaryColor;
+                    font-size: 24px;
+                    font-weight: 500;
+                    margin-bottom: 25px;
+                    text-align: center;
+                    width: 100%;
+                }
+                button {
+                    width: 100%;
+                    background-color: $secondaryColor;
+                    border: none;
+                    padding: 20px;
+                    border-radius: 7px;
+                    font-size: 16px;
+                    margin-bottom: 15px;
+                    color: #ffffff;
+                }
+                p {
+                    text-align: center;
+                    font-size: 18px;
+                    color: gray;
+                    a {
+                        color: $secondaryColor !important;
+                    }
+                }
+                .custom-input__group {
+                    border: 1px solid #e3e3e3;
+                    border-radius: 5px;
+                    margin-bottom: 20px;
+                    input {
+                        &::placeholder {
+                            font-size: 16px !important;
+                        }
+                    }
+                }
+                .form-header {
+                    font-size: 18px;
+                    font-weight: 400;
+                    color: #252525;
+                    margin-bottom: 10px;
+                }
+            }                
+        }
+    }
+}
+
+// Responsive
+
+@include breakpoint-max(767px) {
+    .signIn-section{
+        padding-left: 30px;
+        padding-right: 30px;
+        &--card {
+            max-width: 400px;
+            &-input {
+                max-width: 320px;
+                padding: 10px;
+                p {
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                }
+                form {
+                    h4 {
+                        font-size: 20px;
+                    }
+                    .custom-input__group {
+                        margin-bottom: 10px !important;
+                        input {
+                            &::placeholder {
+                                font-size: 14px !important;
+                            }
+                        }
+                    }
+                    .form {
+                        &-check__box {
+                            margin-bottom: 20px;
+                            label {
+                                font-size: 14px;
+                                padding-left: 20px;
+                                &:before {
+                                    width: 11px;
+                                    height: 11px;
+                                    top: 4px;
+                                }
+                            }
+                            .custom-input__checkbox input:checked ~ label:before {
+                                font-size: 10px;
+                            }
+                        }
+                        &-header {
+                            font-size: 16px;
+                        }
+                    }
+                    button {
+                        padding: 10px;
+                        font-size: 14px;
+                        margin-bottom: 10px;
+                    }
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+@include breakpoint-max(380px) {
+    .signIn-section{
+        &--card {
+            padding: 10px;
+            &-logo {
+                img {
+                    max-width: 150px;
+                }
+            }
+            &-input {
+                form {
+                    .form {
+                        &-check__box {
+                            p {
+                                line-height: 1.5 !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

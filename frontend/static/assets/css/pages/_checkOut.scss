@@ -1,0 +1,520 @@
+// Add variables here
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.billing {
+    &-cupon {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        button {
+            font-weight: 400;
+            font-size: 18px;
+            color: $primaryColor;
+            border: none;
+            padding: 18px;
+            border-radius: 5px;
+            width: 100%;
+            box-shadow: 0px 0px 15px 5px #f7f7f7;
+            &:not(:last-child){
+                margin-right: 20px;
+            }
+        }
+    }
+    &-section {
+        border-radius: 5px;
+        box-shadow: 0px 4px 94px 0px rgba(236, 236, 236 ,55%);
+        padding: 50px 100px;
+
+        .shipping-information {
+            display: flex;
+            gap: 40px;
+
+            .shipping-details {
+                width: 100%;
+                .title {
+                    font-size: 32px;
+                    font-weight: 700;
+                    margin-bottom: 30px;
+                    padding-bottom: 25px;
+                    border-bottom: 2px solid #e3e3e3;
+                }
+                .custom-input__checkbox {
+                    margin-bottom: 25px;
+                    label {
+                        font-size: 16px;
+                        &:before {
+                            width: 13px;
+                            height: 13px;
+                            top: 5px;
+                        }
+                    }
+                }
+                h5 {
+                    font-size: 18px;
+                    font-weight: 400;
+                    margin-bottom: 15px;
+                    color: $primaryColor;
+                }
+                textarea {
+                    width: 100%;
+                    height: 150px;
+                    padding: 15px;
+                    box-sizing: border-box;
+                    border: 1px solid #e3e3e3;
+                    border-radius: 4px;
+                    font-size: 16px;
+                    // resize: none;
+                    &::placeholder {
+                        font-size: 16px;
+                        font-weight: 400;
+                    }
+                }
+                
+            }
+            .payment {
+                width: 80%;
+                .title {
+                    font-size: 32px;
+                    font-weight: 700;
+                    margin-bottom: 25px;
+                }
+                &-item {
+                    display: flex;
+                    border: 1px solid #e3e3e3;
+                    padding: 8px 20px;
+                    &:not(:last-child){
+                        margin-bottom: 20px;
+                    }
+                    .custom-input__checkbox {
+                        input {
+                            &:checked {
+                                &~label {
+                                    &:before {
+                                        font-size: 20px;
+                                    }
+                                }
+                            }
+                        }
+                        label:before {
+                            width: 20px;
+                            height: 20px;
+                            border: none;
+                            background: #e3e3e3;
+                            top: 0px;
+                        }
+                    }
+                    &--picture {
+                        width: 100%;
+                        text-align: center;
+                        figure {
+                            img {
+                                height: 55px;
+                                width: auto;
+                                object-fit: contain;
+                            }
+                        }
+                    }
+                }
+                button {
+                    border: none;
+                    background: #ff0000;
+                    padding: 20px 20px;
+                    border-radius: 5px;
+                    color: #ffffff;
+                    width: 100%;
+                    font-size: 18px;                
+                }
+            }
+        }
+    }
+    &-information {
+        display: flex;
+        gap: 40px;
+        .billing-details {
+            width: 100%;
+            .title {
+                font-size: 32px;
+                font-weight: 700;
+                margin-bottom: 30px;
+                padding-bottom: 25px;
+                border-bottom: 2px solid #e3e3e3;
+            }
+            label {
+                margin-bottom: 10px;
+                color: #3e3e3e;
+                font-size: 18px;
+            }
+            .input-group{
+                &:not(:last-child){
+                    margin-bottom: 20px;
+                }
+                display: flex;
+                flex-direction: column;
+                .custom-input__group {
+                    margin-bottom: 0;
+                    input {
+                        border: 1px solid #e3e3e3;
+                        padding: 10px 20px;
+                        width: 100%;
+                        border-radius: 5px;
+                    }
+                }
+            }
+            &--email {
+                display: flex;
+                &---item {
+                    width: 100%;
+                    margin-bottom: 20px;
+                    &:not(:last-child){
+                        margin-right: 20px;
+                    }
+                }
+            }
+            &--select {
+                display: flex;
+                white-space: nowrap;
+                &---item {
+                    width: 100%;
+                    margin-bottom: 20px;
+                    &:not(:last-child){
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+        .order-summery {
+            width: 80%;
+            .title {
+                font-size: 32px;
+                font-weight: 700;
+                margin-bottom: 30px;
+                padding-bottom: 25px;
+                border-bottom: 2px solid #e3e3e3;
+            }
+            .order {
+                &-list {
+                    &--item {
+                        display: flex;
+                        justify-content: space-between;
+                        border-bottom: 1px solid #e3e3e3;
+                        &:not(:last-child){
+                            padding-bottom: 20px;
+                            margin-bottom: 20px;
+                        }
+                    }
+                    &--item1 {
+                        display: flex;
+                        justify-content: space-between;
+                        border-bottom: 1px solid #e3e3e3;
+                            padding-bottom: 20px;
+                            margin-bottom: 20px;
+                        
+                    }
+                    &--header {
+                        .order-list--item---title {
+                            font-size: 18px;
+                            font-weight: 500;
+                            color: #3e3e3e;
+                        }
+                    }
+                    &--body {
+                        .order-list--item---title {
+                            font-size: 18px;
+                            font-weight: 400;
+                            color: #3e3e3e;
+                        }
+                    }
+                }
+                &-select {
+                    width: 160px;
+                    margin-left: auto;
+                    margin-bottom: 18px;
+                    p {
+                        &:not(:last-child) {
+                            margin-bottom: 10px;
+                        }
+                    }
+                    [type="radio"]:checked,
+                    [type="radio"]:not(:checked) {
+                        position: absolute;
+                        left: -9999px;
+                    }
+                    [type="radio"]:checked + label,
+                    [type="radio"]:not(:checked) + label
+                    {
+                        position: relative;
+                        padding-left: 28px;
+                        cursor: pointer;
+                        line-height: 17px;
+                        display: inline-block;
+                        color: #3e3e3e;
+                        font-size: 18px;
+                    }
+                    [type="radio"]:checked + label:before,
+                    [type="radio"]:not(:checked) + label:before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 16px;
+                        height: 16px;
+                        border: 1px solid #3e3e3e;
+                        border-radius: 100%;
+                        background: #fff;
+                    }
+                    [type="radio"]:checked + label:after,
+                    [type="radio"]:not(:checked) + label:after {
+                        content: "";
+                        width: 10px;
+                        height: 10px;
+                        background: #ff0000;
+                        position: absolute;
+                        top: 3px;
+                        left: 3px;
+                        border-radius: 100%;
+                        transition: all 0.2s ease;
+                    }
+                    [type="radio"]:not(:checked) + label:after {
+                        opacity: 0;
+                        -webkit-transform: scale(0);
+                        transform: scale(0);
+                    }
+                }
+                &-total {
+                    .order-list {
+                        &--body {
+                            &.order-list--item {
+                                border-top: 1px solid #e3e3e3;
+                                border-bottom: 0;
+                                padding-top: 20px;
+                                padding-bottom: 0;
+                            }
+                        }
+                        &--header {
+                            &.order-list--item {
+                                border-bottom: 0;
+                            }
+                            .order-list--item---title {
+                                font-size: 22px;
+                            }
+                            .order-list--item---info {
+                                font-size: 22px;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }    
+}
+
+//Responsive 
+@include breakpoint-max(1199px) {
+    .billing {
+        &-section {
+            padding: 50px;
+            .shipping-information {
+                .payment {
+                    width: 65%;
+                }
+            }
+        }
+    }
+}
+@include breakpoint-max(991px) {
+    .billing {
+        &-cupon {
+            flex-direction: column;
+            button {
+                box-shadow: 0px 0px 2px 1px #f2f1f1;
+                &:not(:last-child){
+                    margin-right: 0;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        &-section {
+            .shipping-information {
+                flex-direction: column;
+                gap: 0;
+                .payment {
+                    width: 100%;
+                }
+            }
+        }
+        &-information {
+            flex-direction: column;
+            gap: 0;
+            .order-summery {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@include breakpoint-max(767px) {
+    .billing {
+        &-cupon {
+            margin-bottom: 30px;
+            button {
+                font-size: 16px;
+            }
+        }
+        &-section {
+            padding: 30px;
+            .shipping-information {
+                padding-top: 20px;
+                // gap: 0;
+                .shipping-details {
+                    .title {
+                        font-size: 24px;
+                        margin-bottom: 20px;
+                        padding-bottom: 18px;
+                    }
+                    .custom-input__checkbox {
+                        margin-bottom: 15px;
+                        label {
+                            font-size: 14px;
+                            &:before {
+                                width: 12px;
+                                height: 12px;
+                                top: 4px;
+                                font-size: 11px;
+                            }
+                        }
+                    }
+                    h5 {
+                        font-size: 16px;
+                    }
+                    textarea {
+                        &::placeholder {
+                            font-size: 14px;
+                        }
+                    }
+                }
+                .payment {
+                    .title {
+                        font-size: 24px;
+                        margin-bottom: 15px;
+                    }
+                    &-item {
+                        padding: 5px 20px;
+                        &:not(:last-child) {
+                            margin-bottom: 15px;
+                        }
+                    }
+                    button {
+                        padding: 15px 20px;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        &-information {
+            // gap: 0;
+            .billing-details {
+                .title {
+                    font-size: 24px;
+                    margin-bottom: 20px;
+                    padding-bottom: 18px;
+                }
+                label {
+                    font-size: 16px;
+                }
+                .input-group{
+                    &:not(:last-child){
+                        margin-bottom: 15px;
+                    }
+                }
+                &--email {
+                    &---item {
+                        margin-bottom: 15px;
+                    }
+                }
+                &--select {
+                    &---item {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+
+            .order-summery {
+                .title {
+                    font-size: 24px;
+                    margin-bottom: 20px;
+                    padding-bottom: 18px;
+                }
+                .order {
+                    &-list {
+                        &--item {
+                            padding-bottom: 10px;
+                            margin-bottom: 10px;
+                        }
+                        &--header {
+                            .order-list--item---title {
+                                font-size: 16px;
+                            }
+                        }
+                        &--body {
+                            .order-list--item---title {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                    &-select {
+                        width: 146px;
+                        margin-bottom: 10px;
+                        p {
+                            &:not(:last-child) {
+                                margin-bottom: 5px;
+                            }
+                        }
+                        [type="radio"]:checked + label,
+                        [type="radio"]:not(:checked) + label
+                        {
+                            font-size: 16px;
+                        }
+                    }
+                    &-total {
+                        .order-list {
+                            &--body {
+                                &.order-list--item {
+                                    padding-top: 10px;
+                                }
+                            }
+                            &--header {
+                                .order-list--item---title {
+                                    font-size: 20px;
+                                }
+                                .order-list--item---info {
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include breakpoint-max(575px) {
+    .billing {
+        &-section {
+            .shipping-information {
+                .shipping-details {
+                    .custom-input__checkbox label {
+                        padding-left: 20px;
+                    }
+                }
+            }
+        }
+        &-information {
+            .billing-details--select {
+                flex-wrap: wrap;
+                white-space: normal;
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+// Add variables here
+@use "./mixins" as *;
+
+:root {
+  --nav-height: 75px;
+
+  @include breakpoint-max(767px) {
+    --nav-height: 65px;
+  }
+}
+
+// $primaryColor: #0c0c0c;
+
+// $secondaryColor: #846d62;
+$primaryColor: #566d7e;
+
+$secondaryColor: #566d7e;
+
+$grayColor: #3a3a3a;
+$borderColor: #e3e3e3;
+$gray: #3d3b3b;
+$bgWhite: #ffffff;
+$titleRed: #566d7e;
+$inverseColor: #ffffff;
+$linkHover: #3d3b3b;
+$linkColor: #0c0c0c;
+$linkActive: #c3d136;
+$hover: #c3d136;
+$upVote: #4caf50;
+$downVote: #ed2939;
+$notification-badge: #e41e3f;

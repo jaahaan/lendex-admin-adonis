@@ -1,0 +1,18 @@
+// Add variables here
+@use '../abstracts/variables' as *;
+
+// Add Colors here
+body {
+    background-color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $primaryColor;
+}
+
+a {
+    color: $secondaryColor;
+    &:hover {
+        color: $secondaryColor;
+    }
+}

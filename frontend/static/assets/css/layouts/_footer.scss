@@ -1,0 +1,346 @@
+// Add variables here
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// Add styles here
+.footer {
+  background-color: $secondaryColor;
+  &-customer {
+    padding-top: 45px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #262626;
+
+    &__item {
+      flex: 0 0 auto;
+      width: 33.33%;
+      display: flex;
+      align-items: center;
+      margin-bottom: 25px;
+      i {
+        font-size: 70px;
+        color: green;
+      }
+      figure {
+        flex: 0 0 auto;
+        width: 66px;
+      }
+      &--content {
+        padding-left: 40px;
+        h3 {
+          font-size: 1.5em;
+          color: $inverseColor;
+          margin-bottom: 10px;
+        }
+        p {
+          color: #6a6a6a;
+        }
+      }
+    }
+  }
+  &-info {
+    padding-top: 45px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #262626;
+
+    &__item {
+      margin-bottom: 25px;
+      h3 {
+        color: $inverseColor;
+        font-size: 1.25em;
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+      p {
+        color: #6a6a6a;
+        margin-bottom: 15px;
+      }
+      ul {
+        li {
+          &:not(:last-child) {
+            margin-bottom: 15px;
+          }
+          a {
+            color: #6a6a6a;
+            &:hover {
+              color: $secondaryColor;
+            }
+          }
+        }
+      }
+      .custom-input__group {
+        width: 100%;
+        background-color: #ffffff;
+        border-radius: 4px;
+        margin-bottom: 15px;
+        .custom-input__append {
+          i {
+            font-size: 20px;
+          }
+        }
+      }
+      &--icon {
+        li {
+          display: inline-block;
+          &:not(:last-child) {
+            margin-right: 10px;
+            margin-bottom: 0;
+          }
+          a {
+            i {
+              color: $secondaryColor;
+            }
+          }
+        }
+      }
+    }
+    &__left {
+      .footer-info__item {
+        border-right: 1px solid #262626;
+        padding-right: 26%;
+      }
+    }
+    &__right {
+      padding-left: 8%;
+      .row {
+        justify-content: space-between;
+        & > * {
+          width: auto;
+        }
+      }
+    }
+  }
+  &-copyright {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    p {
+      font-size: 16px;
+      color: $bgWhite;
+      text-align: center;
+    }
+  }
+}
+
+// RESPONSIVE STARTS
+
+@include breakpoint-max(1399px) {
+  .footer {
+    &-info {
+      &__item {
+        .custom-input__field {
+          padding: 18px 9px;
+        }
+      }
+    }
+  }
+}
+@include breakpoint-max(1199px) {
+  .footer {
+    &-customer {
+      &__item {
+        figure {
+          width: 50px;
+        }
+
+        &--content {
+          padding-left: 30px;
+
+          h3 {
+            font-size: 1.3em;
+          }
+        }
+      }
+    }
+    &-info {
+      &__item {
+        .custom-input__field {
+          padding: 18px 18px;
+          width: 185px;
+        }
+      }
+    }
+  }
+}
+@include breakpoint-max(991px) {
+  .footer {
+    &-customer {
+      &__item {
+        width: 50%;
+
+        &--content {
+          h3 {
+            font-size: 1.3em;
+          }
+        }
+      }
+    }
+    &-info {
+      &__item {
+        ul {
+          li:not(:last-child) {
+            margin-bottom: 0;
+          }
+        }
+        .custom-input__field {
+          padding: 18px 18px;
+          width: 100%;
+        }
+      }
+      &__left {
+        .footer-info__item {
+          padding-right: 0;
+          border-right: 0;
+          border-bottom: 1px solid #262626;
+          padding-bottom: 45px;
+        }
+      }
+      &__right {
+        padding-left: 0;
+        padding-top: 20px;
+      }
+    }
+  }
+}
+@include breakpoint-max(767px) {
+  .footer {
+    &-customer {
+      padding-top: 35px;
+      padding-bottom: 5px;
+      &__item {
+        figure {
+          width: 30px;
+        }
+        &--content {
+          padding-left: 20px;
+          h3 {
+            font-size: 1.125em;
+            margin-bottom: 5px;
+          }
+          p {
+            font-size: 0.875em;
+          }
+        }
+      }
+    }
+    &-info {
+      padding-top: 30px;
+      padding-bottom: 5px;
+      &__item {
+        h3 {
+          font-size: 1.125em;
+          margin-bottom: 10px;
+        }
+        p {
+          font-size: 0.875em;
+          margin-bottom: 10px;
+        }
+        .custom-input {
+          &__group {
+            margin-bottom: 10px !important;
+            .custom-input__append {
+              i {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+        &--icon {
+          font-size: 12px;
+          i {
+            &:not(:last-child) {
+              margin-right: 6px;
+            }
+          }
+        }
+      }
+      &__right {
+        padding-top: 10px;
+        padding-left: 0;
+        padding-right: 0;
+        .footer-info__item {
+          ul {
+            li {
+              font-size: 0.875em;
+              &:not(:last-child) {
+                margin-bottom: 5px;
+              }
+            }
+          }
+        }
+      }
+      &__left {
+        .footer-info__item {
+          padding-bottom: 30px;
+        }
+      }
+    }
+    &-copyright {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      p {
+        font-size: 0.875em;
+      }
+    }
+  }
+}
+@include breakpoint-max(575px) {
+  .footer {
+    &-customer {
+      padding-bottom: 15px;
+      &__item {
+        width: 100%;
+        margin-bottom: 15px;
+
+        h3 {
+          font-size: 1em;
+          margin-bottom: 2px;
+        }
+        p {
+          font-size: 0.75em;
+        }
+      }
+    }
+    &-info {
+      &__item {
+        h3 {
+          margin-bottom: 8px;
+        }
+        p {
+          font-size: 0.75em;
+          margin-bottom: 8px;
+        }
+        .custom-input__group {
+          margin-bottom: 8px !important;
+        }
+      }
+      &__right {
+        .footer-info__item {
+          width: 50%;
+          li {
+            font-size: 0.75em;
+            &:not(:last-child) {
+              margin-bottom: 5px;
+            }
+          }
+        }
+      }
+    }
+    &-copyright {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      p {
+        font-size: 0.75em;
+      }
+    }
+  }
+}
+@include breakpoint-max(480px) {
+  .footer {
+    &-info {
+      &__right {
+        .footer-info__item {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

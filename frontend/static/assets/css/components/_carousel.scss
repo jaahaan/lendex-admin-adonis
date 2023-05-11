@@ -1,0 +1,97 @@
+// Add variables here
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.hooper {
+  &-pagination {
+    bottom: 10px !important;
+  }
+  &-indicators {
+    li {
+      button {
+        background-color: #cdcdcd !important;
+        width: 0.6em;
+        height: 0.6em;
+        border-radius: 50%;
+      }
+    }
+  }
+  &-indicator {
+    &.is-active {
+      background-color: red !important;
+    }
+  }
+  &-navigation {
+    button {
+      margin: 0;
+      padding: 0;
+      width: 45px;
+      height: 45px;
+      color: #ff0000;
+      background-color: white;
+      border-radius: 50%;
+      box-shadow: 0px 0px 55px rgb(228 228 228 / 55%) !important;
+      position: unset;
+      top: auto;
+      transform: none;
+    }
+  }
+}
+
+// Responsive
+
+@include breakpoint-min(1400px) {
+  .hooper {
+    &-prev {
+      left: -3vw !important;
+    }
+
+    &-next {
+      right: -3vw !important;
+    }
+  }
+}
+@include breakpoint-min(992px) {
+  .hooper {
+    &-navigation {
+      button {
+        position: absolute;
+        top: 38%;
+        transform: translateY(-50%);
+      }
+    }
+    &-prev {
+      left: -1vw !important;
+    }
+
+    &-next {
+      right: -1vw !important;
+    }
+  }
+}
+@include breakpoint-max(991px) {
+  .hooper-navigation {
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    button {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+@include breakpoint-max(767px) {
+  .hooper-navigation {
+    button {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+@include breakpoint-max(575px) {
+  .hooper-pagination {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,277 @@
+// Add variables here
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.feedback {
+    &-contact{
+        &--subtitle {
+            font-size: 20px;
+            color: #b9b9b9;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+        &--title {
+            font-size: 42px;
+            color: $primaryColor;
+            margin-bottom: 50px;
+            font-weight: 600;
+        }
+        &--item {
+            &---info {
+                display: flex;
+                align-items: center;
+                &:not(:last-child){
+                    margin-bottom: 30px;
+                }
+                .contact-icon{
+                    color: $secondaryColor;
+                    font-size: 30px;
+                    background-color: #fff0f0;
+                    border: none;
+                    width: 70px;
+                    padding: 20px;
+                    border-radius: 50%;
+                    margin-right: 20px;
+                    height: 70px;
+                    position: relative;
+                    i {
+                        position: absolute;
+                        top: 20px;
+                        left: 20px;
+                    }
+                }
+                .subtitle {
+                    font-size: 16px;
+                    color: #b9b9b9;
+                    font-weight: 400;
+                    margin-bottom: 5px;
+                    }
+                .title {
+                    font-size: 23px;
+                    color: $primaryColor;
+                    font-weight: 500;
+                    cursor: pointer;
+                    a {
+                        color: $primaryColor;
+                    }
+                }
+            }
+        }
+    }
+    &-input {
+        &--area {
+           // width: 100%;
+            .input-field {
+                display: flex;
+                gap: 25px;
+                margin-bottom: 20px;
+            
+                .custom-input__group {
+                    width: 100%;
+                    input {
+                        border: 1px solid #e3e3e3;
+                        border-radius: 4px;
+                        padding: 15px 17px;
+                        width: 100%;
+                        &::placeholder {
+                            //font-size: 18px;
+                            font-weight: 400;
+                            color: #b9b9b9;
+                        }
+                    }
+                }
+            }
+            .textarea-field {
+                textarea {
+                    width: 100%;
+                    margin-bottom: 30px;
+                    padding: 25px 20px;
+                    //height: 350px;
+                    border-color: #e3e3e3;
+                    border-radius: 5px;
+                    resize: vertical;
+                    font-size: 18px;
+                    &::placeholder {
+                        // font-size: 18px;
+                        font-weight: 400;
+                        color: #b9b9b9;
+                    }
+                }
+            }
+            .custom-input__checkbox {
+                margin-bottom: 30px;
+                label {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #848484;
+                    padding-left: 25px;
+                    &:before {
+                        content: "";
+                        width: 14px;
+                        height: 14px;
+                        top: 4px;
+                    }
+                }
+            }
+            button {
+                padding: 15px 40px;
+                font-size: 16px;
+                color: #ffffff;
+                font-weight: 500;
+                border-radius: 4px;
+                background-color: $secondaryColor;
+            }
+        }
+    }
+}
+@include breakpoint-max(991px) {
+    .feedback {
+        &-contact{
+            &--subtitle {
+                font-size: 16px;
+            }
+            &--title {
+                font-size: 25px;
+                margin-bottom: 30px;
+            }
+            &--item {
+                &---info {
+                    &:not(:last-child){
+                        margin-bottom: 18px;
+                    }
+                    .contact-icon {
+                        font-size: 25px;
+                        height: 55px;
+                        width: 55px;
+                        padding: 20px;
+                        margin-right: 15px;
+                        i{
+                            top: 15px;
+                            left: 16px;
+                        }
+                    }
+                    .subtitle {
+                        font-size: 14px;
+                        }
+                    .title {
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+        &-input {
+            &--area {
+                .input-field {
+                    gap: 0;
+                    margin-bottom: 15px;
+                    flex-wrap: wrap;
+                    margin-left: -5px;
+                    margin-right: -5px;
+                    .custom-input__group {
+                        flex: 0 0 auto;
+                        width: 50%;
+                        margin-bottom: 0 !important;
+                        padding: 0 5px;
+                        input {
+                            padding: 13px 13px;
+                            font-size: 10px;
+                        }
+                    }
+                }
+                .textarea-field {
+                    textarea {
+                        margin-bottom: 8px;
+                        padding: 12px 10px;
+                        font-size: 16px;
+                    }
+                }
+                .custom-input__checkbox {
+                    margin-bottom: 13px;
+                    label {
+                        font-size: 14px;
+                        padding-left: 20px;
+                        &:before {
+                            width: 12px;
+                            height: 12px;
+                        }
+                    }
+                    input:checked ~ label:before {
+                        font-size: 11px;
+                    }
+                }
+                button {
+                    padding: 10px 25px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+@include breakpoint-max(480px) {
+    .feedback {
+        &-section {
+            gap: 25px;
+        }
+        &-contact{
+            &--subtitle {
+                font-size: 14px;
+                margin-bottom: 4px;
+            }
+            &--title {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+            &--item {
+                &---info {
+                    .contact-icon {
+                        font-size: 18px;
+                        padding: 10px;
+                        margin-right: 10px;
+                        width: 45px;
+                        height: 45px; 
+                        i {
+                            top: 14px;
+                            left: 13px;
+                        }
+                    }
+                    .subtitle {
+                        font-size: 12px;
+                        }
+                    .title {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        &-input {
+            &--area {
+                
+                .textarea-field {
+                    textarea {
+                        margin-bottom: 5px;
+                        font-size: 13px;
+                    }
+                }
+                .custom-input__checkbox {
+                    margin-bottom: 10px;
+                    label {
+                        padding-left: 14px;
+                        font-size: 12px;
+                        &:before {
+                            width: 10px;
+                            height: 10px;
+                            top: 3.2px;
+                        }
+                    }
+                    input:checked ~ label:before {
+                        font-size: 8px;
+                    }
+                }
+                button {
+                    font-size: 10px;
+                    padding: 8px 30px;
+                }
+            }
+        }
+    }
+}
